@@ -1,8 +1,11 @@
-var people = ['juan','ana','michelle','daniella','stefany','lucy','barak'];
+var people = ['juan', 'ana', 'michelle', 'daniella', 'stefany', 'lucy', 'barak'];
 
-function deletePerson(personName)
-{
-	//your code here
+function deletePerson(personName) {
+    //your code here
+    var NewArray = []
+    for (var i = 0; i <= people.length; i++) {
+        NewArray[j] = people[i]
+    }
 }
 
 console.log(deletePerson('daniella'));
