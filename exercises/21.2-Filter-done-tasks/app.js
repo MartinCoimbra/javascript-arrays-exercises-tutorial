@@ -10,3 +10,7 @@ let tasks = [
 ];
 
 //your code here
+var tareasEchas = tasks.filter(function(tasksArray){
+    return (tasksArray.done === true)
+})
+console.log(tareasEchas)
