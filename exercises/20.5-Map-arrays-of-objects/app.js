@@ -7,7 +7,15 @@ let people = [
 ];
 
 let simplifier = function(person){
-	return person.name;
+    var anioActual = new Date();
+    var edad = anioActual.getFullYear() - person.birthDate.getFullYear();
+    var mes = anioActual.getMonth() - person.birthDate.getMonth();
+
+    if (mes < 0 || (mes === 0 && anioActual.getDate() < person.birthDate.getDate())) {
+        edad--;
+    }
+    return 'Hello, my name is ' + person.name + ' and I am ' + edad + ' years old'
+
 };
 
 console.log(people.map(simplifier));
