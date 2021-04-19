@@ -9,6 +9,7 @@ console.log(lyricsGenerator([1,1,1]))
 function lyricsGenerator(musicArray){
     let onesCounter = 0;
     let stringToReturn = "";
+    
     musicArray.map((value) => {
         if (value == 1) {
             onesCounter += 1;
