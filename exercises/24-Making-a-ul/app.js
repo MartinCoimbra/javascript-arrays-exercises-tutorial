@@ -1,3 +1,4 @@
+  
 let allColors = [
 	{label: 'Red', sexy: true},
 	{label: 'Pink', sexy: false},
@@ -9,25 +10,26 @@ let allColors = [
 ];
 
 function generateLI(color){
-	// your code here
+   return "<li>" + color.label + "</li>";
 }
 
 function filterColors(color){
-	// your code here
+    if(color.sexy === true){
+        return color.label
+    }
 }
 
 function generateHTMLFromArray(array){
 	
-	let filteredOptions = array.filter(filterColors);
+    let filteredOptions = array.filter(filterColors);
 	let LIs = filteredOptions.map(generateLI);
 
 	let htmlString = '<ul>';
-	LIs.forEach(function(elm){
-		htmlString += elm;
+	LIs.forEach(function(indexElement){
+		htmlString += indexElement;
 	})
 	htmlString += '</ul>';
 	return htmlString;
 }
 
 console.log(generateHTMLFromArray(allColors));
-
